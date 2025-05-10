@@ -51,5 +51,13 @@ namespace ProductAPI.Controllers
             if (!deleted) return NotFound();
             return NoContent();
         }
+
+        [HttpGet("totalprice")]
+        public IActionResult GetTotalPrice()
+        {
+            var total = _productService.GetTotalPrice();
+            return Ok(new { totalPrice = total });
+        }
+
     }
 }

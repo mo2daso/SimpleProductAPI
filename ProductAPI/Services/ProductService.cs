@@ -36,6 +36,12 @@ namespace ProductAPI.Services
             _products.Remove(product);
             return true;
         }
+
+        public decimal GetTotalPrice()
+        {
+            return _products.Sum(p => p.Price);
+        }
+
     }
 }
 

@@ -10,5 +10,6 @@ namespace ProductAPI.Services
         void AddProduct(Product product);
         bool UpdateProduct(int id, Product product);
         bool DeleteProduct(int id);
+        decimal GetTotalPrice();
     }
 }
